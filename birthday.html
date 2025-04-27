@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật 🎉🍰</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fffae6;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            color: #333;
+        }
+
+        .birthday-container {
+            background-color: #fff8e1;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: #ff6347;
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        .image-gallery {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .gallery-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: opacity 1s ease-in-out;
+        }
+
+        .emoji {
+            font-size: 40px;
+            margin-top: 20px;
+            animation: wave 1s infinite alternate;
+        }
+
+        button {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 12px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #ff4500;
+        }
+
+        .gift-video {
+            margin-top: 30px;
+            display: none;
+        }
+
+        /* Animation */
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(15deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="birthday-container">
+        <h1>Chúc Mừng Sinh Nhật! 🎉🎂</h1>
+        <div class="image-gallery">
+            <img src="Huy/z6548208364556_21c21dfe1e1a38d9caa52ba1369e7bd0.jpg" alt="Ảnh 1" class="gallery-image">
+            <img src="Huy/z6548208369795_0d5803df6d41fa29d54dec2bfdbc6c09.jpg" alt="Ảnh 2" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208373588_148a9979ac64d463559756ed9eb951ee.jpg" alt="Ảnh 3" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208383046_e427c529c9adb308094ef6b4339c77fa.jpg" alt="Ảnh 4" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208386713_2d6c7c72e8a529440c318879ef60fdd3.jpg" alt="Ảnh 5" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208394806_87f40a7ab27ed591b69423bd2a7c5fb4.jpg" alt="Ảnh 6" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208398462_2801b2e6b144d38f4fbeef2341df88c2.jpg" alt="Ảnh 7" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208402395_a5de7a7cd731c730dc1b6ec50e980aca.jpg" alt="Ảnh 8" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208402719_f7a3464021a6a593c62bd606a979cad0.jpg" alt="Ảnh 9" class="gallery-image" style="display:none;">
+            <img src="Huy/z6548208403052_77a0c85a4c0a153084909b5b5bde6000.jpg" alt="Ảnh 10" class="gallery-image" style="display:none;">
+        </div>
+        <div class="emoji">🎉🍰🎈🎁</div>
+        <button id="giftButton">Nhận Quà 🎁</button>
+        <p>Click vào đây để nhận quà ạkkkk</p>
+        <div class="gift-video">
+            <video controls>
+                <source src="Huy/vdieo.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        let images = document.querySelectorAll('.gallery-image');
+        let currentImage = 0;
+        let giftButton = document.getElementById('giftButton');
+        let giftVideo = document.querySelector('.gift-video');
+
+        function changeImage() {
+            images[currentImage].style.display = 'none';
+            currentImage = (currentImage + 1) % images.length;
+            images[currentImage].style.display = 'block';
+        }
+
+        setInterval(changeImage, 2000); // Chuyển ảnh mỗi 3 giây
+
+        giftButton.addEventListener('click', function() {
+            giftVideo.style.display = 'block'; // Hiển thị quà khi nhấn nút
+        });
+    </script>
+</body>
+</html>
